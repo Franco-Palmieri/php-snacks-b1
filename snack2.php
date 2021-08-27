@@ -16,7 +16,7 @@
 
   
 
-    if(strlen($nome) >= 3 && $pos && is_numeric($eta)){
+    if(strlen($nome) >= 3 && strpos($mail, "@") && strpos($mail, ".") && is_numeric($eta)){
         echo "Accesso Riuscito";
     }else{
         echo "Accesso Negato";
