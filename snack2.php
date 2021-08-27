@@ -12,14 +12,14 @@
     $mail = $_GET['mail'];
     $eta = $_GET['eta'];
     $search = '@';
-    $pos = strpos($search, $mail);
+    $pos = strpos($mail, $search);
 
-    if(strlen($nome) >= 3){
-        echo "Ciao";
-    };
+  
 
-    if($pos === true){
-        echo "ciao";
+    if(strlen($nome) >= 3 && $pos && is_numeric($eta)){
+        echo "Accesso Riuscito";
+    }else{
+        echo "Accesso Negato";
     };
     ?>
 
