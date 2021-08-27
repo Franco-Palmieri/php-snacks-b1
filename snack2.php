@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php
+    $nome = $_GET['nome'];
+    $mail = $_GET['mail'];
+    $eta = $_GET['eta'];
+    $search = '@';
+    $pos = strpos($search, $mail);
+
+    if(strlen($nome) >= 3){
+        echo "Ciao";
+    };
+
+    if($pos === true){
+        echo "ciao";
+    };
+    ?>
+
 </body>
 </html>
