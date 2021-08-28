@@ -48,7 +48,25 @@ $posts = [
         ]
     ],
 ];
+//array_keys = gli mando l'array originale e ritorna un array lista posizionale di chiavi.
 
+$arrayKeys = array_keys($posts);
+
+for($x = 0; $x < count($arrayKeys); $x++){
+    //attribuisco ad una nuova variabile le chiavi (date) degli array.
+    $keyOriginal = $arrayKeys[$x];
+
+    echo "{$keyOriginal} <br>";
+
+    for($i = 0; $i < count($posts[$keyOriginal]); $i++){
+
+        $post = $posts[$keyOriginal][$i];
+
+        echo "<h1> {$post['title']} </h1>";
+        echo "<span> {$post['author']} </span>";
+        echo "<div> {$post['text']} </div> <hr>";
+    };
+};   
 ?>
 </body>
 </html>
